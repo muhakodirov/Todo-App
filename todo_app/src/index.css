@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* index.css */
+
+/* Reset some default browser styles */
+body,
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color to the entire app */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Add some basic styles to anchor links */
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+/* Apply some basic styles to the root app container */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
