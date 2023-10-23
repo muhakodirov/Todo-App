@@ -21,4 +21,35 @@
     width: 100%;
 }
 
-/* You can add more styles here as needed */
+.todoIcon {
+    margin-right: 15px;
+    font-size: 2rem;
+    color: green;
+}
+
+.checkIcon,
+.deleteIcon {
+    cursor: pointer;
+    color: rgb(159, 158, 158);
+    font-size: 1.8rem;
+    transition: transform 0.3s;
+    margin-left: 15px;
+    font-size: 2rem;
+}
+
+.checkIcon:hover,
+.deleteIcon:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.checkIcon:hover {
+    color: rgb(2, 135, 24);
+
+}
+
+.deleteIcon:hover {
+    color: rgb(222, 12, 51);
+
+
+}
