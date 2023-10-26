@@ -21,6 +21,12 @@
     width: 100%;
 }
 
+.todo.completedTodo .todoIcon,
+.todo.completedTodo .checkIcon,
+.todo.completedTodo .deleteIcon {
+    color: gray;
+}
+
 .todoIcon {
     margin-right: 15px;
     font-size: 2rem;
@@ -52,4 +58,10 @@
     color: rgb(222, 12, 51);
 
 
+}
+
+.completedTodo {
+    background-color: unset;
+    border-color: gray;
+    color: gray;
 }

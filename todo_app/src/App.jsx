@@ -16,12 +16,16 @@ function App() {
       isCompleted: false,
       id: uuidv4()
     }
-    console.log(newTodo)
+
     setTodos([...todos, newTodo])
   }
 
-  const deleteTodoHandler = (index) => {
-    setTodos(todos.filter((todo, idx) => idx !== index))
+
+  const deleteTodoHandler = (id) => {
+    console.log(id)
+    setTodos(todos.filter(todo => todo.id !== id))
+
+
   }
 
 
