@@ -3,6 +3,7 @@ import TodoList from './components/Todos/TodoList';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css'
 import { useEffect, useRef, useState } from 'react';
+import TodoActions from './components/Todos/TodoActions';
 
 
 function App() {
@@ -18,13 +19,17 @@ function App() {
     }
 
     setTodos([...todos, newTodo])
+
   }
 
-
+  // id = 324
+  // todo.id = 324
   const deleteTodoHandler = (id) => {
-    console.log(id)
     setTodos(todos.filter(todo => todo.id !== id))
+  }
 
+  const checkTodoHandler = (id) => {
+    setTodos(todos.map((todo) => todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : { ...todo }))
 
   }
 
@@ -33,8 +38,10 @@ function App() {
     <div className='centered'>
       <h1>Todo APP</h1>
 
+
       <TodoForm addTodo={addTodoHandler} />
-      <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
+      <TodoActions />
+      <TodoList todos={todos} deleteTodo={deleteTodoHandler} checkTodo={checkTodoHandler} />
 
     </div>
   );

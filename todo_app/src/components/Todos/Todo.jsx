@@ -1,18 +1,19 @@
 import styles from './Todo.module.css'
-import { RiTodoFill, RiDeleteBinFill, RiCheckFill } from "react-icons/ri";
+import { RiTodoFill, RiDeleteBinFill, RiCheckboxCircleLine } from "react-icons/ri";
+import TodoActions from './TodoActions';
 
 
-function Todo({ todo, deleteTodo }) {
+function Todo({ todo, deleteTodo, checkTodo }) {
 
 
-    return <div className={styles.todo}>
+    return <div className={`${styles.todo} ${todo.isCompleted ? styles.completedTodo : ''} `}>
 
         <RiTodoFill className={styles.todoIcon} />
         <div className={styles.todoText}>
             {todo.text}
         </div>
         <RiDeleteBinFill className={styles.deleteIcon} onClick={() => deleteTodo(todo.id)} />
-        <RiCheckFill className={styles.checkIcon} />
+        <RiCheckboxCircleLine className={styles.checkIcon} onClick={() => checkTodo(todo.id)} />
 
     </div>
 }
