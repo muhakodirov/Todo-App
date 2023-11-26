@@ -52,7 +52,7 @@ function App() {
       {todos.length > 0 && <TodoActions resetTodos={resetTodosHandler} deleteComplTodos={deleteCompletedTodosHnadler} isComletedCount={!!isComletedCount} />}
       <TodoList todos={todos} deleteTodo={deleteTodoHandler} checkTodo={checkTodoHandler} />
 
-      {(todos.length > 0 && isComletedCount > 0) && <p> <i> Sie haben <b> {isComletedCount} </b> {isComletedCount > 1 ? 'Aufgaben' : 'Aufgabe'} erledigt.  </i> <br /><br /> {isComletedCount > 3 && 'Du bist heute wirklich produktiv 🤩 '}</p>}
+      {(todos.length > 0 && isComletedCount > 0) && <h3> Sie haben <b> {isComletedCount} </b> {isComletedCount > 1 ? 'Aufgaben' : 'Aufgabe'} erledigt.  <br /><br /> {isComletedCount > 3 && 'Sie sind heute wirklich produktiv 🤩 '}</h3>}
     </div>
   );
 }
